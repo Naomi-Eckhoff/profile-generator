@@ -2,5 +2,26 @@
   "dependencies": {
     "inquirer": "^8.2.0",
     "jest": "^27.3.1"
-  }
+  },
+  "name": "profile-lookup",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naomi-Eckhoff/profile-lookup.git"
+  },
+  "author": "Naomi Eckhoff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Naomi-Eckhoff/profile-lookup/issues"
+  },
+  "homepage": "https://github.com/Naomi-Eckhoff/profile-lookup#readme",
+  "description": ""
 }
