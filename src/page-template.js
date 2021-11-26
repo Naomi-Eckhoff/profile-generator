@@ -1,3 +1,5 @@
+const Index = require('../index');
+
 // create the team
 const generateTeam = sentObject => {
 
@@ -62,17 +64,18 @@ const generateTeam = sentObject => {
 
     if (sentObject.role === "Manager") {
         html.push(generateManager(sentObject));
-        console.log(html);
+        html.join("");
     }
     if (sentObject.role === "Engineer") {
-        html.push(generateEngineer(sentObject).join(""));
+        html.push(generateEngineer(sentObject));
+        html.join("");
     }
     if (sentObject.role === "Intern") {
-        html.push(generateIntern(sentObject).join(""));
+        html.push(generateIntern(sentObject));
+        html.join("");
     }
 
-    //return html.join("");
-
+    Index.roleChoice()
 }
 
 // export function to generate entire page

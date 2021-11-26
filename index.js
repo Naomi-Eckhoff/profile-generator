@@ -115,3 +115,5 @@ const writeToFile = content => {
 
 
 managerInquirer();
+
+exports.roleChoice = roleChoice;
