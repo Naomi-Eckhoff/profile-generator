@@ -58,10 +58,13 @@ const generateTeam = team => {
         `;
     };
 
-    const html = [];
+    const html = {};
 
-    html.push(team
-        .filter(employee => employee.getRole() === "Manager")
+    console.log(Object.values(team)
+        .filter(employee => employee.includes("Manager")));
+
+    html.push(Object.values(team)
+        .filter(employee => employee.includes("Manager"))
         .map(manager => generateManager(manager))
     );
     html.push(team
