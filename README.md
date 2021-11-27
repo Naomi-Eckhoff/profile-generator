@@ -20,6 +20,10 @@
 
   run index.js and answer the prompts that it returns. the generated file is placed in ./dist/page.html
   
+  ## Video Walkthrough
+ 
+ https://user-images.githubusercontent.com/88948869/143669445-f784d04f-0c65-4818-8dad-2a609fee59d8.mp4
+
 
   
   
