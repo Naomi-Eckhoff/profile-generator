@@ -1,5 +1,3 @@
-const Index = require('../index');
-
 if (!html) {
     var html = [];
 }
@@ -78,6 +76,8 @@ const generateTeam = sentObject => {
         return html;
     }
     html.join("");
+
+    const Index = require('../index');
 
     Index.roleChoice()
 }
