@@ -3,7 +3,7 @@
   ![license badge](https://img.shields.io/badge/license-MIT-blue)
   ## Description
 
-  generates a page with data on employees
+  This app generates a webpage with data on employees that the user enters through the command line.
 
   ## Table of Contents
 
