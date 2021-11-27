@@ -1,9 +1,9 @@
-const Employee = require('./lib/Employee');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 const pageTemplate = require('./src/page-template');
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 const answers = {
   name: 'name',
@@ -77,28 +77,28 @@ function roleChoice() {
     .prompt({
       type: 'list',
       name: 'role',
-      message: 'Would you like to add another employee',
+      message: 'Would you like to add another employee?',
       choices: ['Engineer', 'Intern', 'Finished']
     })
     .then(({ role }) => {
-      if (role === 'Finished') {
-        // jump to html write
-      }
-
       answers.role = role;
+
+      if (role === 'Finished') {
+        return writeToFile(answers);
+      }
 
       nonManagerInquirer();
     });
 }
 
-const writeToFile = content => {
+const writeToFile = answers => {
   //adds dist folder if it doesn't exist
   if (!fs.existsSync('./dist')) {
     fs.mkdirSync('./dist');
   }
 
   return new Promise((resolve, reject) => {
-    fs.writeFile('./dist/page.html', content, err => {
+    fs.writeFile('./dist/page.html', pageTemplate(answers), err => {
       if (err) {
         reject(err);
         return;

@@ -1,5 +1,9 @@
 const Index = require('../index');
 
+if (!html) {
+    var html = [];
+}
+
 // create the team
 const generateTeam = sentObject => {
 
@@ -60,20 +64,20 @@ const generateTeam = sentObject => {
         `;
     };
 
-    const html = [];
 
     if (sentObject.role === "Manager") {
         html.push(generateManager(sentObject));
-        html.join("");
     }
     if (sentObject.role === "Engineer") {
         html.push(generateEngineer(sentObject));
-        html.join("");
     }
     if (sentObject.role === "Intern") {
         html.push(generateIntern(sentObject));
-        html.join("");
     }
+    if (sentObject.role === "Finished") {
+        return html;
+    }
+    html.join("");
 
     Index.roleChoice()
 }
